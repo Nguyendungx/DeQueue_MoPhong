@@ -216,23 +216,57 @@ void kiemTra(DEQUEUE* dq)
     cin >> t;
     if (t == 1)
     {
-        insertLeft(dq);
-        kiemTra(dq);
+        if (dq->size() < 7)
+        {
+            insertLeft(dq);
+            kiemTra(dq);
+        }
+        else
+        {
+            cout << "Ngan xep day !Chi co the DELETE." << endl;
+            kiemTra(dq);
+        }
+
     }
     else if (t == 2)
     {
-        insertRight(dq);
-        kiemTra(dq);
+        if (dq->size() < 7)
+        {
+            insertRight(dq);
+            kiemTra(dq);
+        }
+        else
+        {
+            cout << "Ngan xep day ! Chi co the DELETE." << endl;
+            kiemTra(dq);
+        }
     }
     else if (t == 3)
     {
-        deleteLeft(dq);
-        kiemTra(dq);
+        if (dq->size() > 0)
+        {
+            deleteLeft(dq);
+            kiemTra(dq);
+        }
+        else
+        {
+            cout << "Ngan xep rong ! Chi co the INSERT." << endl;
+            kiemTra(dq);
+        }
+
     }
     else if (t == 4)
     {
-        deleteRight(dq);
-        kiemTra(dq);
+        if (dq->size() > 0)
+        {
+            deleteRight(dq);
+            kiemTra(dq);
+        }
+        else
+        {
+            cout << "Ngan xep rong ! Chi co the INSERT." << endl;
+            kiemTra(dq);
+        }
     }
 }
 
@@ -246,6 +280,5 @@ int main()
     _getch();
     system("cls");
     kiemTra(dq);
-    //dq->insert("2", true);
-    //showFinal(dq);
+    return 0;
 }
