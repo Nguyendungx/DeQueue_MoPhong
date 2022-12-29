@@ -276,7 +276,37 @@ int main()
     dq->init();
     initgraph();
     char s1[] = "Press any key to view the program.";
+    line(400, 280, 800, 280);
+    line(400, 370, 800, 370);
+    setcolor(12);
+    for (int i = 0; i < 6; i++)
+    {
+        rectangle(420+60*i, 300, 470+60*i, 350);
+    }
+    setcolor(4);
+    line(300, 300, 380, 300);
+    line(360, 290, 380, 300);
+    line(360, 310, 380, 300);
+    drawText(260, 240, "INSERT FRONT");
+
+    line(300, 350, 380, 350);
+    line(300, 350, 320, 340);
+    line(300, 350, 320, 360);
+    drawText(260, 370, "DELETE FRONT");
+
+
+    line(800, 300, 880, 300);
+    line(860, 290, 880, 300);
+    line(860, 310, 880, 300);
+    drawText(840, 240, "INSERT REAR");
+
+    line(800, 350, 880, 350);
+    line(800, 350, 820, 340);
+    line(800, 350, 820, 360);
+    drawText(840, 370, "DELETE REAR");
+
     drawText(400, 50, s1);
+    drawText(500, 150, "SIMULATION DEQUEUE");
     _getch();
     system("cls");
     kiemTra(dq);
